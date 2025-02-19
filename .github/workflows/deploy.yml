@@ -1,0 +1,40 @@
+name: Deploy Angular to cPanel
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Navigate to project folder
+        run: cd neeti-anusandhan
+
+      - name: Install Dependencies
+        run: cd neeti-anusandhan && npm install
+
+      - name: Build Angular App
+        run: cd neeti-anusandhan && npm run build -- --configuration=production
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: neeti-anusandhan/dist/
+          server-dir: ${{ secrets.FTP_REMOTE_PATH }}
+          port: ${{ secrets.FTP_PORT }}
