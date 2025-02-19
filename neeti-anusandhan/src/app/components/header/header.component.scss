@@ -1,0 +1,142 @@
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  padding: 10px;
+  background: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Sidebar Toggle Button (☰) */
+.menu-toggle {
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 15px;
+  display: block;
+  position: relative; /* Makes sure it's correctly positioned in the navbar */
+  z-index: 100; /* Ensure it's above the sidebar */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.nav-links li {
+  padding: 10px 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: darkblue;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Sidebar Open Class */
+.sidebar.open {
+  left: 0;
+}
+
+/* Sidebar Links */
+.sidebar a {
+  padding: 15px;
+  display: block;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #444; /* Optional for separating items */
+}
+
+.sidebar a:hover {
+  background-color: #444; /* Optional hover effect */
+}
+
+/* Close Button (×) */
+.close-btn {
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Show the menu toggle button on mobile */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Optional: Style sidebar links for mobile */
+  .sidebar a {
+    padding: 15px;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+/* Peace, Progress, Prosperity styling */
+.prosperity, .progres, .peace {
+  color: darkblue;
+}

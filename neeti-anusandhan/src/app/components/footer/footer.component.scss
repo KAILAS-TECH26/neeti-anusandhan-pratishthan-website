@@ -1,0 +1,36 @@
+.bg-darkblue {
+    background-color: #0d1b2a;
+}
+
+.footer {
+    text-align: left;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer p,
+.footer ul {
+    font-size: 0.9rem;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #1e90ff;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}

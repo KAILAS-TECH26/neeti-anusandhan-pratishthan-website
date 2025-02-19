@@ -1,0 +1,79 @@
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4 text-primary">Contact Us</h2>
+                    <p class="text-center text-muted">
+                        Have any questions? Feel free to reach out to us.
+                    </p>
+
+                    <form #contactForm="ngForm" (ngSubmit)="submitForm()">
+                        <!-- Name Field -->
+                        <div class="form-group mb-3">
+                            <label class="form-label">Full Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Enter your name"
+                                    [(ngModel)]="contact.name" name="name" required />
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group mb-3">
+                            <label class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="Enter your email"
+                                    [(ngModel)]="contact.email" name="email" required />
+                            </div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group mb-3">
+                            <label class="form-label">Message</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-comment-dots"></i></span>
+                                <textarea class="form-control" rows="4" placeholder="Write your message here..."
+                                    [(ngModel)]="contact.message" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="text-center mt-4">
+                <h5>Reach Us At:</h5>
+                <p><i class="fas fa-phone"></i> +977 984-7386571</p>
+                <p><i class="fas fa-map-marker-alt"></i>  Lamichhane Complex, Baburam Acharya Sadak, Sinamangal, (Near old Tara Hall Chowk), Kathmandu-9, Kathmandu, Nepal</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    <!-- Google Maps Embed with Pinned Location -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="map-container">
+                <iframe width="100%" height="400" style="border: 0" loading="lazy" allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0627378170156!2d85.3158271!3d27.7145254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e1d776d893:0xf0ce4ef5cbafac6a!2sKathmandu,%20Nepal!5e0!3m2!1sen!2snp!4v1644682783775!5m2!1sen!2snp"></iframe>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="https://www.google.com/maps?q=27.7145254,85.3158271" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
