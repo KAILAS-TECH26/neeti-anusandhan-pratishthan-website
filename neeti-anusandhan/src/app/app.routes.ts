@@ -7,7 +7,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // ✅ Homepage now uses HomeComponent
-  { path: 'about-nenap', component: AboutNenapComponent },
+  { path: 'about-nenap', component: AboutNenapComponent},
   { path: 'executive-committee', component: ExecutiveCommitteeComponent},
   { path: 'contact', component: ContactUsComponent },
   { path: 'newsletter', component: NewsletterComponent }
