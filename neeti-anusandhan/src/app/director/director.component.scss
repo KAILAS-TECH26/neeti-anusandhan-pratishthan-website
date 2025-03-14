@@ -1,0 +1,24 @@
+.text-justify {
+    text-align: justify;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.shadow-lg {
+    border: 1px solid #ddd;
+}
+
+.director-photo {
+    width: 350px; /* ✅ Adjust the size as needed */
+    height: 450px;
+    object-fit: cover; /* Keeps aspect ratio, crops if necessary */
+    border: 4px solid #f8f9fa; /* Light border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .director-photo:hover {
+    transform: scale(1.05); /* Adds a little zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow */
+  }
