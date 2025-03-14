@@ -1,0 +1,50 @@
+<section class="py-5" id="gallery">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Gallery</h2>
+      <div class="row g-3">
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4 gallery-item"
+          *ngFor="let image of galleryImages"
+          (click)="openModal(image)"
+          style="cursor: pointer;"
+        >
+          <img
+            [src]="image.thumb"
+            class="img-fluid rounded shadow-sm hover-effect"
+            [alt]="image.caption"
+          />
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bootstrap Modal for Enlarged Image -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="imageModalLabel">{{ selectedImage?.caption }}</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              [src]="selectedImage?.src"
+              class="img-fluid rounded"
+              [alt]="selectedImage?.caption"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

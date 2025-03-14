@@ -97,17 +97,23 @@ section {
      position: relative;
 }
 
-.slide1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(3, 3, 3, 0.4)), url(../../../assets/bg_banner1.jpg);
+
+.slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/change2.jpg);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-} 
+}
 
+.slide3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/change3.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-
-.slide2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/bg_banner2.jpg);
+.slide4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/change4.jpg);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,7 +229,7 @@ text-align: center;}
 
 
 #milestone {
-    background: linear-gradient(rgba(255, 77, 41, 0.85), rgba(255, 77, 41, 0.85)), url(../../../assets/bg_banner1.jpg);
+    background: linear-gradient(rgba(255, 77, 41, 0.85), rgba(255, 77, 41, 0.85)), url(../../../assets/change2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -344,7 +350,7 @@ text-align: center;}
 
 #reviews {
 
-    background: linear-gradient(-90deg, rgba(8, 32, 50, 0.8), rgba(8, 32, 50, 0.8)), url(../../../assets/bg_banner1.jpg), #082032;;
+    background: linear-gradient(-90deg, rgba(8, 32, 50, 0.8), rgba(8, 32, 50, 0.8)), url(../../../assets/change2.jpg), #082032;;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -432,7 +438,7 @@ text-align: center;}
 }
 
 footer {
-    background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9)), url(../../../assets/bg_banner1.jpg), #082032;;
+    background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9)), url(../../../assets/change2.jpg), #082032;;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

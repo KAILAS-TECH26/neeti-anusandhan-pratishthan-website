@@ -10,10 +10,10 @@
   <nav class="navbar">
     <!-- Sidebar Toggle Button -->
     <button class="menu-toggle" (click)="toggleSidebar()">☰</button>
-    
+
     <!-- Logo -->
     <img src="assets/logo.jpg" alt="Logo" class="logo" />
-    
+
     <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a class="nav-link" routerLink="/">Home</a></li>
@@ -27,7 +27,16 @@
         </ul>
       </li>
       <li><a href="#">Dialogue & Policy</a></li>
-      <li><a href="#">Programmes</a></li>
+      <li class="dropdown" (mouseenter)="isProgrammesDropdownOpen = true"
+      (mouseleave)="isProgrammesDropdownOpen = false">
+        <a>Programmes</a>
+        <ul class="dropdown-menu" [class.active]="isProgrammesDropdownOpen">
+          <li><a class="nav-link" routerLink="/gallery">Gallery</a></li>
+          <!-- <li><a class="nav-link" routerLink="/executive-committee">Executive Committee</a></li>
+          <li><a class="nav-link" href="#">Director</a></li>
+          <li><a class="nav-link" href="#">Executive Director</a></li> -->
+        </ul>
+      </li>
       <li><a href="#">Vimarsh</a></li>
       <li><a href="#">Publication</a></li>
       <li><a class="nav-link" routerLink="/newsletter">News Letter</a></li>
@@ -39,14 +48,10 @@
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar" [class.open]="isSidebarOpen">
     <button class="close-btn" (click)="toggleSidebar()">×</button>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Dialogue & Policy</a>
-    <a href="#">Programmes</a>
-    <a href="#">Vimarsh</a>
-    <a href="#">Publication</a>
+    <a class="nav-link" routerLink="/">Home</a>
+    <a class="nav-link" routerLink="/about-nenap">About NeNAP</a>
+    <a class="nav-link" routerLink="/executive-committee">Executive Committee</a>
     <a class="nav-link" routerLink="/newsletter">News Letter</a>
-    <a href="#">Research Cell</a>
     <a class="nav-link" routerLink="/contact">Contact Us</a>
   </div>
 </header>

@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   isSidebarOpen = false;
   isDropdownOpen = false;
+  isProgrammesDropdownOpen = false;
 
   constructor(private router: Router) {}
 

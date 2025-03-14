@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   standalone: true,  // Mark the component as standalone
 })
 export class FooterComponent {
-  email: string = "nenapinresearch@hmail.com";
+  email: string = "nenapinresearch@gmail.com";
 }
